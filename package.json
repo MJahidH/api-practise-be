@@ -8,7 +8,8 @@
     "seed": "node ./run-seed.js",
     "dev": "npx nodemon app.js",
     "test": "jest",
-    "start": "node listen.js"
+    "start": "node listen.js",
+    "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "",
