@@ -13,6 +13,6 @@ const mySqlLink = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}
 
 // })
 
-const pool = mysql.createPool(process.env.MYSQL_URL);
+const pool = mysql.createPool(mySqlLink);
 
 module.exports = pool;
