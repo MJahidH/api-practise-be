@@ -9,6 +9,13 @@ app.get("/notes", async (req, res) => {
   res.send(notes);
 });
 
+
+
+app.get("/notes", async (req, res) => {
+  const notes = await getNotes();
+  res.send(notes);
+});
+
 const server = app.listen(8080, () => {
   // console.log("server is running right now on 8080");
 });
