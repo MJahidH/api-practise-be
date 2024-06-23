@@ -6,14 +6,18 @@ app.use(express.json());
 
 app.get("/notes", async (req, res) => {
   const notes = await getNotes();
-  res.send(notes);
+  res.send(notes)
 });
 
 
 
 app.get("/notes", async (req, res) => {
-  const notes = await getNotes();
-  res.send(notes);
+  getNotes().then(() => {
+    res.send(notes)
+  }).catch((err)=> {
+    console.error(err)
+  })
+  
 });
 
 const server = app.listen(8080, () => {
