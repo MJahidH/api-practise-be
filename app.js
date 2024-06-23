@@ -11,13 +11,15 @@ app.get("/", async (req, res) => {
 
 
 
-app.get("/notes", async (req, res) => {
-  getNotes().then(() => {
-    res.send(notes)
-  }).catch((err)=> {
-    console.error(err)
-  })
-  
+app.get('/notes', (req, res) => {
+  getNotes()
+    .then((notes) => {
+      res.status(200).send(notes);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send({ error: 'Failed to get notes' });
+    });
 });
 
 // const server = app.listen(8080, () => {
