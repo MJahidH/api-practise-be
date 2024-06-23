@@ -20,8 +20,8 @@ app.get("/notes", async (req, res) => {
   
 });
 
-const server = app.listen(8080, () => {
-  // console.log("server is running right now on 8080");
-});
+// const server = app.listen(8080, () => {
+//   // console.log("server is running right now on 8080");
+// });
 
-module.exports = {app,server};
+module.exports = app;
