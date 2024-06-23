@@ -2,7 +2,7 @@ const mysql = require("mysql2/promise");
 const dotenv = require("dotenv");
 dotenv.config();
 
-//  const mySqlLink = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDB}`;
+ const mySqlLink = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDB}`;
 
 // const pool = mysql.createPool({
 
@@ -13,6 +13,6 @@ dotenv.config();
 
 // })
 
-const pool = mysql.createPool(process.env.NYSQL_URL);
+const pool = mysql.createPool(process.env.MYSQL_URL);
 
 module.exports = pool;
